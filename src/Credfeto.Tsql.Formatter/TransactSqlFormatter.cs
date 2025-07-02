@@ -9,9 +9,9 @@ using Microsoft.SqlServer.TransactSql.ScriptDom;
 
 namespace Credfeto.Tsql.Formatter;
 
-public static class TsqlFormatting
+public sealed class TransactSqlFormatter : ITransactSqlFormatter
 {
-    public static ValueTask<string> FormatAsync(string source, SqlScriptGeneratorOptions options, in CancellationToken cancellationToken)
+    public ValueTask<string> FormatAsync(string source, SqlScriptGeneratorOptions options, in CancellationToken cancellationToken)
     {
         cancellationToken.ThrowIfCancellationRequested();
 
