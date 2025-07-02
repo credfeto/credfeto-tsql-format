@@ -10,6 +10,10 @@
  - any: [ 'CHANGELOG.md' ]
 "Config Change":
  - any: [ 'src/**/*.json', '!src/global.json' ]
+"credfeto-tsql-formatter":
+ - any: [ 'src/$Credfeto.Tsql.Formatter/**/*' ]
+"credfeto-tsql-formatter-test":
+ - any: [ 'src/$Credfeto.Tsql.Formatter.Test/**/*' ]
 "github-actions":
  - any: [ '.github/workflows/*.yml' ]
 "Markdown":

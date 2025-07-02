@@ -26,6 +26,14 @@
    color: "d8bb50"
    description: "Configuration files changes"
 
+ - name: "credfeto-tsql-formatter"
+   color: "96f7d2"
+   description: "Changes in Credfeto.Tsql.Formatter project"
+
+ - name: "credfeto-tsql-formatter-test"
+   color: "96f7d2"
+   description: "Changes in Credfeto.Tsql.Formatter.Test project"
+
  - name: "dependencies"
    color: "0366d6"
    description: "Updates to dependencies"
