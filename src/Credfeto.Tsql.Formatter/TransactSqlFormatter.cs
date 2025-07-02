@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.SqlServer.TransactSql.ScriptDom;
@@ -25,7 +26,6 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
             return ValueTask.FromResult(source);
         }
 
-
         cancellationToken.ThrowIfCancellationRequested();
 
         Sql170ScriptGenerator generator = new(options);
@@ -41,6 +41,11 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
 
         string[] splitResults = formattedSql.Split('\n');
 
+        if (ShouldNeverFormat(splitResults))
+        {
+            return ValueTask.FromResult(source);
+        }
+
         int pos = splitResults.Length - 1;
 
         while (pos >= 0 && string.IsNullOrEmpty(splitResults[pos]))
@@ -53,12 +58,31 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
             return ValueTask.FromResult(source);
         }
 
-        if (StringComparer.Ordinal.Equals(splitResults[pos], "GO"))
+        if (StringComparer.Ordinal.Equals(splitResults[pos], y: "GO"))
         {
             return ValueTask.FromResult(formattedSql);
         }
 
         return ValueTask.FromResult(formattedSql + "\nGO\n\n\n");
+    }
+
+    private static bool ShouldNeverFormat(string[] splitResults)
+    {
+        string[] matches =
+        [
+            "CREATE ROLE ",
+            "CREATE TABLE ",
+            "CREATE FUNCTION ",
+            "CREATE PROCEDURE ",
+            "CREATE VIEW ",
+            "CREATE TYPE ",
+            "CREATE INDEX "
+        ];
+
+        return !splitResults.SelectMany(collectionSelector: _ => matches, resultSelector: (result, candidate) => (result, candidate))
+                            .Where(item => item.result.StartsWith(value: item.candidate, comparisonType: StringComparison.Ordinal))
+                            .Select(item => item.result)
+                            .Any();
     }
 
     private static bool TryParse(string text, [NotNullWhen(true)] out TSqlFragment? fragment)
