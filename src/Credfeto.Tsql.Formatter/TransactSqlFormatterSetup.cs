@@ -1,3 +1,4 @@
+using Credfeto.Tsql.Formatter.Services;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Credfeto.Tsql.Formatter;

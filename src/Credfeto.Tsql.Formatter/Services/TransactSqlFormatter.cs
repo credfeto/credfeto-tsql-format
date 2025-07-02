@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.SqlServer.TransactSql.ScriptDom;
 
-namespace Credfeto.Tsql.Formatter;
+namespace Credfeto.Tsql.Formatter.Services;
 
 public sealed class TransactSqlFormatter : ITransactSqlFormatter
 {

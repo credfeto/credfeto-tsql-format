@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Credfeto.Tsql.Formatter.Services;
 using FunFair.Test.Common;
 using Xunit;
 
