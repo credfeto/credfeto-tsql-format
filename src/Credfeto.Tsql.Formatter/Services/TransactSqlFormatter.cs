@@ -21,6 +21,11 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
             return ValueTask.FromResult(source);
         }
 
+        if(ContainsComments(source))
+        {
+            return ValueTask.FromResult(source);
+        }
+
         if (!TryParse(text: source, out TSqlFragment? fragment))
         {
             return ValueTask.FromResult(source);
@@ -64,6 +69,11 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
         }
 
         return ValueTask.FromResult(formattedSql + "\nGO\n\n\n");
+    }
+
+    private static bool ContainsComments(string source)
+    {
+        return source.Contains("/*", StringComparison.Ordinal) || source.Contains("-- ", StringComparison.Ordinal);
     }
 
     private static bool ShouldNeverFormat(string[] splitResults)
