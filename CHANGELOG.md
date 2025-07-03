@@ -7,6 +7,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 
 ## [Unreleased]
 ### Added
+- Initial version using Microsoft.SqlServer.TransactSql.ScriptDom as backend
 ### Fixed
 ### Changed
 - SDK - Updated DotNet SDK to 9.0.301
