@@ -41,6 +41,6 @@ public static class TSqlOptions
             SpaceBetweenDataTypeAndParameters = true,
             SpaceBetweenParametersInDataType = true,
             SqlEngineType = SqlEngineType.All,
-            SqlVersion = SqlVersion.Sql170
+            SqlVersion = SqlVersion.Sql170,
         };
 }
