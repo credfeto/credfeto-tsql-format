@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -12,7 +12,11 @@ namespace Credfeto.Tsql.Formatter.Services;
 
 public sealed class TransactSqlFormatter : ITransactSqlFormatter
 {
-    public ValueTask<string> FormatAsync(string source, SqlScriptGeneratorOptions options, in CancellationToken cancellationToken)
+    public ValueTask<string> FormatAsync(
+        string source,
+        SqlScriptGeneratorOptions options,
+        in CancellationToken cancellationToken
+    )
     {
         cancellationToken.ThrowIfCancellationRequested();
 
@@ -21,7 +25,7 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
             return ValueTask.FromResult(source);
         }
 
-        if(ContainsComments(source))
+        if (ContainsComments(source))
         {
             return ValueTask.FromResult(source);
         }
@@ -86,13 +90,14 @@ public sealed class TransactSqlFormatter : ITransactSqlFormatter
             "CREATE PROCEDURE ",
             "CREATE VIEW ",
             "CREATE TYPE ",
-            "CREATE INDEX "
+            "CREATE INDEX ",
         ];
 
-        return !splitResults.SelectMany(collectionSelector: _ => matches, resultSelector: (result, candidate) => (result, candidate))
-                            .Where(item => item.result.StartsWith(value: item.candidate, comparisonType: StringComparison.Ordinal))
-                            .Select(item => item.result)
-                            .Any();
+        return !splitResults
+            .SelectMany(collectionSelector: _ => matches, resultSelector: (result, candidate) => (result, candidate))
+            .Where(item => item.result.StartsWith(value: item.candidate, comparisonType: StringComparison.Ordinal))
+            .Select(item => item.result)
+            .Any();
     }
 
     private static bool TryParse(string text, [NotNullWhen(true)] out TSqlFragment? fragment)
