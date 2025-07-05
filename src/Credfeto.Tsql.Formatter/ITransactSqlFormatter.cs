@@ -6,5 +6,9 @@ namespace Credfeto.Tsql.Formatter;
 
 public interface ITransactSqlFormatter
 {
-    public ValueTask<string> FormatAsync(string source, SqlScriptGeneratorOptions options, in CancellationToken cancellationToken);
+    public ValueTask<string> FormatAsync(
+        string source,
+        SqlScriptGeneratorOptions options,
+        in CancellationToken cancellationToken
+    );
 }
