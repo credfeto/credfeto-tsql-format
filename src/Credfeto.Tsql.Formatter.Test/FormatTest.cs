@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Credfeto.Tsql.Formatter.Services;
 using FunFair.Test.Common;
 using Xunit;
@@ -17,7 +17,11 @@ public sealed partial class FormatTest : LoggingTestBase
 
     private async Task ReformatAsync(string source, string expected)
     {
-        string result = await this._formatter.FormatAsync(source: source, options: TSqlOptions.DefaultOptions, this.CancellationToken());
+        string result = await this._formatter.FormatAsync(
+            source: source,
+            options: TSqlOptions.DefaultOptions,
+            this.CancellationToken()
+        );
 
         this.CheckResults(expected: expected, result: result);
     }
