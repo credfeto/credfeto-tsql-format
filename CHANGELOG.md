@@ -12,9 +12,9 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - SDK - Updated DotNet SDK to 9.0.304
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.7.0
 - Dependencies - Updated FunFair.Test.Common to 6.1.284.1617
-- Dependencies - Updated FunFair.CodeAnalysis to 7.1.20.1362
 - Dependencies - Updated Credfeto.Enumeration to 1.2.127.1366
 - Dependencies - Updated Credfeto.Version.Information.Generator to 1.0.113.784
+- Dependencies - Updated FunFair.CodeAnalysis to 7.1.21.1364
 ### Removed
 ### Deployment Changes
 
