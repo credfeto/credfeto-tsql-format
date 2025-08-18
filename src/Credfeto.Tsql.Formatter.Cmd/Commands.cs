@@ -44,7 +44,6 @@ internal sealed class Commands
         [Option(name: "work", ['w'], Description = "folder where to clone repositories")] string workFolder
     )
     {
-        // TODO load options from editorconfig
         SqlScriptGeneratorOptions options = TSqlOptions.DefaultOptions;
 
         string[] sqlFiles = Directory.GetFiles(
