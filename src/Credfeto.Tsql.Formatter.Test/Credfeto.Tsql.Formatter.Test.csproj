@@ -16,7 +16,6 @@
     <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
     <IlcOptimizationPreference>Size</IlcOptimizationPreference>
     <ImplicitUsings>disable</ImplicitUsings>
-    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
     <IsPackable>false</IsPackable>
     <IsPublishable>false</IsPublishable>
     <IsTrimmable>false</IsTrimmable>
@@ -36,6 +35,7 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
     <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <WarnOnPackingNonPackableProject>false</WarnOnPackingNonPackableProject>
     <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>

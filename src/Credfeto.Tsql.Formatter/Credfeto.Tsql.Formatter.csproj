@@ -1,43 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
-    <EnablePackageValidation>true</EnablePackageValidation>
-    <EnableTrimAnalyzer>false</EnableTrimAnalyzer>
-    <EnableRequestDelegateGenerator>true</EnableRequestDelegateGenerator>
-    <Features>strict;flow-analysis</Features>
-    <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
-    <ImplicitUsings>disable</ImplicitUsings>
-    <IncludeOpenAPIAnalyzers>true</IncludeOpenAPIAnalyzers>
-    <IsPackable>true</IsPackable>
-    <IsPublishable>false</IsPublishable>
-    <IsTrimmable>false</IsTrimmable>
-    <LangVersion>latest</LangVersion>
-    <NoWarn />
-    <Nullable>enable</Nullable>
-    <OutputType>Library</OutputType>
-    <RunAOTCompilation>false</RunAOTCompilation>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <TieredCompilation>true</TieredCompilation>
-    <TreatSpecificWarningsAsErrors />
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsAsErrors />
-    <EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>true</EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
-    <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
-    <OptimizationPreference>speed</OptimizationPreference>
-    <IsTrimmable>true</IsTrimmable>
-    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
-    <TieredPGO>true</TieredPGO>
-    <UseSystemResourceKeys>true</UseSystemResourceKeys>
-    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
-    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
-    <DebuggerSupport>true</DebuggerSupport>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <NuGetAudit>true</NuGetAudit>
-    <NuGetAuditLevel>low</NuGetAuditLevel>
-    <NuGetAuditMode>all</NuGetAuditMode>
-  </PropertyGroup>
-  <PropertyGroup>
     <AnalysisLevel>latest</AnalysisLevel>
     <AnalysisMode>AllEnabledByDefault</AnalysisMode>
     <Authors>Mark Ridgwell</Authors>
@@ -45,18 +7,51 @@
     <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
     <Company>Mark Ridgwell</Company>
     <Copyright>Mark Ridgwell</Copyright>
+    <DebuggerSupport>true</DebuggerSupport>
     <Description>TSQL Formatting tool</Description>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+    <EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>true</EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnablePackageValidation>true</EnablePackageValidation>
+    <EnableRequestDelegateGenerator>true</EnableRequestDelegateGenerator>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <EnforceExtendedAnalyzerRules>false</EnforceExtendedAnalyzerRules>
+    <Features>strict;flow-analysis</Features>
+    <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
     <GenerateSBOM>true</GenerateSBOM>
+    <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    <IlcOptimizationPreference>Size</IlcOptimizationPreference>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <IncludeSymbols>true</IncludeSymbols>
+    <IsPackable>true</IsPackable>
+    <IsPublishable>false</IsPublishable>
+    <IsTrimmable>true</IsTrimmable>
+    <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
+    <LangVersion>latest</LangVersion>
     <NeutralLanguage>en-GB</NeutralLanguage>
+    <NoWarn />
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <Nullable>enable</Nullable>
+    <OptimizationPreference>speed</OptimizationPreference>
+    <OutputType>Library</OutputType>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
     <PackageTags>Tsql formatting tool;tool;tsql</PackageTags>
     <Product>TSQL Formatting tool</Product>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/credfeto/credfeto-tsql-format</RepositoryUrl>
+    <RunAOTCompilation>false</RunAOTCompilation>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TieredCompilation>true</TieredCompilation>
+    <TieredPGO>true</TieredPGO>
+    <TreatSpecificWarningsAsErrors />
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <UseSystemResourceKeys>true</UseSystemResourceKeys>
+    <WarningsAsErrors />
   </PropertyGroup>
   <ItemGroup>
     <!-- error NU1903: Warning As Error: Package 'System.Private.Uri' 4.3.0 has a known high severity vulnerability -->
@@ -80,7 +75,7 @@
     <PackageReference Include="CSharpIsNullAnalyzer" Version="0.1.593" PrivateAssets="all" ExcludeAssets="runtime" />
     <PackageReference Include="FunFair.CodeAnalysis" Version="7.1.22.1366" PrivateAssets="All" ExcludeAssets="runtime" />
     <PackageReference Include="Meziantou.Analyzer" Version="2.0.212" PrivateAssets="All" ExcludeAssets="runtime" />
-    <PackageReference Include="Microsoft.Sbom.Targets" Version="4.1.0" PrivateAssets="All" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Sbom.Targets" Version="4.1.0" PrivateAssets="All" ExcludeAssets="runtime" Condition="$(EnableSbom)=='True'" />
     <PackageReference Include="Microsoft.VisualStudio.Threading.Analyzers" Version="17.14.15" PrivateAssets="All" ExcludeAssets="runtime" />
     <PackageReference Include="Nullable.Extended.Analyzer" Version="1.15.6581" PrivateAssets="All" ExcludeAssets="runtime" />
     <PackageReference Include="Philips.CodeAnalysis.DuplicateCodeAnalyzer" Version="1.6.4" PrivateAssets="All" ExcludeAssets="runtime" />
