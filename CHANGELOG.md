@@ -17,6 +17,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.9.1
 - Dotnet 10
 - Dependencies - Updated FunFair.Test.Common to 6.2.0.1690
+- Dependencies - Updated Microsoft.Extensions to 9.0.9
 ### Removed
 ### Deployment Changes
 
