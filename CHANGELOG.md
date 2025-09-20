@@ -16,6 +16,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Microsoft.Sbom.Targets to 4.1.2
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.9.1
 - Dotnet 10
+- Dependencies - Updated FunFair.Test.Common to 6.2.0.1690
 ### Removed
 ### Deployment Changes
 
