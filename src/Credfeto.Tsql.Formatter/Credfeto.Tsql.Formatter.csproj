@@ -45,7 +45,7 @@
     <RepositoryUrl>https://github.com/credfeto/credfeto-tsql-format</RepositoryUrl>
     <RunAOTCompilation>false</RunAOTCompilation>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <TargetFrameworks>net9.0;net10.0</TargetFrameworks>
     <TieredCompilation>true</TieredCompilation>
     <TieredPGO>true</TieredPGO>
     <TreatSpecificWarningsAsErrors />
@@ -86,13 +86,5 @@
     <PackageReference Include="SonarAnalyzer.CSharp" Version="10.15.0.120848" PrivateAssets="All" ExcludeAssets="runtime" />
     <PackageReference Include="SourceLink.Create.CommandLine" Version="2.8.3" PrivateAssets="All" ExcludeAssets="runtime" />
     <PackageReference Include="ToStringWithoutOverrideAnalyzer" Version="0.6.0" PrivateAssets="All" ExcludeAssets="runtime" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="TransactSqlFormatter.cs">
-      <DependentUpon>FormatterConfig.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
 </Project>
