@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Config/">
+    <File Path="../CHANGELOG.md" />
+    <File Path="../README.md" />
+    <File Path="CodeAnalysis.ruleset" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="Credfeto.Tsql.Formatter.Cmd/Credfeto.Tsql.Formatter.Cmd.csproj" />
+  <Project Path="Credfeto.Tsql.Formatter.Test/Credfeto.Tsql.Formatter.Test.csproj" />
+  <Project Path="Credfeto.Tsql.Formatter/Credfeto.Tsql.Formatter.csproj" />
+</Solution>
