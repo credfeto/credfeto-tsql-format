@@ -18,7 +18,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dotnet 10
 - Dependencies - Updated FunFair.Test.Common to 6.2.0.1690
 - Dependencies - Updated Microsoft.Extensions to 9.0.9
-- SDK - Updated DotNet SDK to 10.0.102
+- SDK - Updated DotNet SDK to 10.0.103
 ### Removed
 ### Deployment Changes
 
